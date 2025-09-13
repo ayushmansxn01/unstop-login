@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/unstop-login/static/css/main.c1c1dae9.css",
+    "main.js": "/unstop-login/static/js/main.16b092d8.js",
+    "static/js/453.3043147c.chunk.js": "/unstop-login/static/js/453.3043147c.chunk.js",
+    "static/media/firstPageImage.svg": "/unstop-login/static/media/firstPageImage.83c1c88f1d6a8b6df201c28a7cb427c1.svg",
+    "static/media/userProfileImage.svg": "/unstop-login/static/media/userProfileImage.c261c1384118f598295ab52683ced7a4.svg",
+    "static/media/googleImage.svg": "/unstop-login/static/media/googleImage.48a1242e139440d2f22a0f5e9bd2242c.svg",
+    "index.html": "/unstop-login/index.html",
+    "static/media/faceBookImage.svg": "/unstop-login/static/media/faceBookImage.26211eac47cec44d5372935215b4b43f.svg",
+    "main.c1c1dae9.css.map": "/unstop-login/static/css/main.c1c1dae9.css.map",
+    "main.16b092d8.js.map": "/unstop-login/static/js/main.16b092d8.js.map",
+    "453.3043147c.chunk.js.map": "/unstop-login/static/js/453.3043147c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1c1dae9.css",
+    "static/js/main.16b092d8.js"
+  ]
+}
