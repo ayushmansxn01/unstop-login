@@ -1,9 +1,5 @@
-
-
-
-
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 import HomePage from "../components/HomePage";
 
@@ -18,9 +14,9 @@ const AppRoutes: React.FC = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        {}
+        {/* Default redirect */}
         <Route
           path="/"
           element={
@@ -28,7 +24,7 @@ const AppRoutes: React.FC = () => {
           }
         />
 
-        {}
+        {/* Login Page */}
         <Route
           path="/auth/login"
           element={!user ? <LoginForm setUser={setUser} /> : <Navigate to="/home" replace />}
@@ -43,7 +39,7 @@ const AppRoutes: React.FC = () => {
         {/* Catch-all → redirect */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
