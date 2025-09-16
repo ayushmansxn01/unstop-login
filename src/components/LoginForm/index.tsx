@@ -1,8 +1,4 @@
 
-
-
-
-
 import React, { useState } from "react";
 import {
   Box,
@@ -38,7 +34,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ setUser }) => {
 
   const [errors, setErrors] = useState<{ username?: string; email?: string; password?: string }>({});
 
-  // ✅ Validation
   const validate = () => {
     const temp: Record<string, string> = {};
     const uErr = validateUsername(username);
@@ -53,20 +48,20 @@ const LoginForm: React.FC<LoginFormProps> = ({ setUser }) => {
     return Object.keys(temp).length === 0;
   };
 
-  // ✅ Submit handler
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!validate()) return;
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (!validate()) return;
 
-    try {
-      const res = await loginUser({ username, password }); // email not included
-      setUser(res);
-      navigate("/home");
-    } catch (error: any) {
-      alert(error.message || "Login failed");
-    }
-  };
-
+  try {
+    const res = await loginUser({ username, password }); // email not included
+    // <- ADD THIS:
+    localStorage.setItem("userData", JSON.stringify(res));
+    setUser(res);
+    navigate("/home");
+  } catch (error: any) {
+    alert(error.message || "Login failed");
+  }
+};
   return (
     <Container>
       {/* Left Image */}
